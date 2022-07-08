@@ -1,11 +1,11 @@
 import { NavbarProduct } from "../components/navbar";
 import React, { useRef, useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "../css/infoProduct.css";
 import { Col, Container,Row, Form,Button, Alert, FloatingLabel,
 } from "react-bootstrap";
 import axios from "axios";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import "../css/infoProduct.css";
 
 export default function InfoProduct() {
   const navigate = useNavigate();

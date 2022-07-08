@@ -1,0 +1,24 @@
+.upload-button {
+    background-image: url(../assets/icons/uploadIcon.png);
+    background-size: auto;
+    width: 96px;
+    height: 96px;
+    cursor: pointer;
+    margin-left: 260px;
+    border-radius: 12px;
+}
+
+#infoProfile img {
+    object-fit: cover;
+    width: 96px;
+    height: 96px;
+    cursor: pointer;
+    margin-left: 260px;
+    border-radius: 12px;
+    
+}
+
+.navbar-info {
+    margin-right: 595px;
+    padding-top: 8px;
+}
