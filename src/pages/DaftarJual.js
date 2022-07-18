@@ -10,10 +10,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import Navbar from "../components/NavBar";
-import CardSeller1 from "../components/CardSeller1";
-import CardSeller2 from "../components/CardSeller2";
-import CardSeller3 from "../components/CardSeller3";
+import Navbar from "../component/NavBar";
+import CardSeller1 from "../component/CardSeller1";
+import CardSeller2 from "../component/CardSeller2";
+import CardSeller3 from "../component/CardSeller3";
 import { useSelector } from "react-redux";
 import { Alert, Stack } from "@mui/material";
 
@@ -56,7 +56,7 @@ export default function DaftarJual() {
                 const token = localStorage.getItem("token");
 
                 const currentUserRequest = await axios.get(
-                    "http://localhost:8888/",
+                    "http://localhost:2000/api/v1/product",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ export default function DaftarJual() {
 
                 if (currentUserResponse.data.user.id) {
                     const dataProducts = await axios.get(
-                        `http://localhost:8888/${currentUserResponse.data.user.id}/product`,
+                        "http://localhost:2000/api/v1/product/seller",
                         {
                             headers: {
                                 Authorization: `Bearer ${token}`,

@@ -32,7 +32,7 @@ function About() {
 
                 // 2. Check token validity from API
                 const currentUserRequest = await axios.get(
-                    "http://localhost:8888/",
+                    "http://localhost:2000/api/v1/profile",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ function About() {
 
 
             const updateRequest = await axios.put(
-                `http://localhost:8888/api/${id}`,
+                `http://localhost:2000/api/v1/profile${id}`,
                 userToUpdatePayload,
                 {
                     headers: {
@@ -121,7 +121,7 @@ function About() {
                     {user.image ? <Box className="profil-account">
                         <Box component={'img'}
                             className="profil-camera-form"
-                            src={`http://localhost:8888/${user.image}`}
+                            src={`http://localhost:2000/api/v1/profile${user.image}`}
                             
                         />
                         <Form.Control type="file" className="formCamera" onChange={(e) => {

@@ -99,7 +99,7 @@ function UpdateProduct() {
             });
 
             const createRequest = await axios.put(
-                `http://localhost:8888/api/product/${id}`,
+                `http://localhost:2000/api/v1/product/1${id}`,
                 postPayload,
                 {
                     headers: {
@@ -126,7 +126,7 @@ function UpdateProduct() {
     const getProduct = async () => {
         try {
             const token = localStorage.getItem("token");
-            const responseProduct = await axios.get(`http://localhost:8888/api/product/${id}`, {
+            const responseProduct = await axios.get(`http://localhost:2000/api/v1/product${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 },

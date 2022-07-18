@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 import "../css/detailproduct.css";
 // import "../css/main.css";
-import Navbar from "../components/NavBar";
+import Navbar from "../component/NavBar";
 import { FiArrowLeft } from "react-icons/fi";
 import { useNavigate, Link, useParams, Navigate } from "react-router-dom";
 import axios from 'axios';

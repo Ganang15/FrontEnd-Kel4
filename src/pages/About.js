@@ -67,7 +67,7 @@ function About() {
 
 
       const updateRequest = await axios.put(
-        `http://localhost:8888/api/users/${id}`,
+        `http://localhost:2000/api/v1/profile${id}`,
         userToUpdatePayload,
         {
           headers: {

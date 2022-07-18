@@ -6,6 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import EditProfil from "./pages/EditProfil";
+import UpdateProduct from "./pages/UpdateProduct";
+import Account from "./pages/Account";
+import DaftarJual from "./pages/DaftarJual";
+import DetailProduct from "./pages/DetailProduct";
 import About from "./pages/About";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
@@ -21,7 +26,7 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
       <Route path="/about/:id" element={<About />} />
-      <Route path="/EditProfil/:id" element={<EditProfil />} />
+      <Route path="/EditProfil" element={<EditProfil />} />
       <Route path="/updateproduct/:id" element={<UpdateProduct />} />
       <Route path="/InfoProduct" element={<InfoProduct />} />
       <Route path="/login" element={<Login />} />

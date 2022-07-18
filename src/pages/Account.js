@@ -99,7 +99,7 @@ export default function SelectedListItem() {
                 <Box className="profil-account">
                     <Box component={'img'}
                     className="profil-camera-form"
-                    src={`http://localhost:8888/${user.image}`}
+                    src={`http://localhost:2000/api/v1/profile${user.image}`}
                     />
                 </Box>
             </Container>
