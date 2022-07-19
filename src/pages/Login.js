@@ -82,7 +82,7 @@ export default function Login() {
     return (
         <Row>
             <Col className="register-left">
-                <img src="/images/img-register.png" alt=""/>
+                <img src="/images/login.jpg" alt=""/>
             </Col>
             <Col className="register-right">
                 <h3 className="mb-3">Masuk</h3>
