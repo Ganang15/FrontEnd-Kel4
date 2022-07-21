@@ -177,7 +177,7 @@ export default function NavBar() {
                                       </Dropdown.Menu>
                                     </Dropdown>
 
-                                    <Button className="home-navbar-user" href="/editprofile"><FiUser className="icon-user-header" /></Button>
+                                    <Button className="home-navbar-user" href="/account"><FiUser className="icon-user-header" /></Button>
 
                                     <Offcanvas show={show} onHide={handleClose} id="off-canvas">
                                         <Offcanvas.Header closeButton>
@@ -186,7 +186,7 @@ export default function NavBar() {
                                         <Offcanvas.Body>
                                             <Dropdown.Item href="#/action-1">Notifikasi</Dropdown.Item>
                                             <Dropdown.Item className="mt-2" href="/seller/daftar-jual">Daftar Jual</Dropdown.Item>
-                                            <Dropdown.Item className="mt-2" href="/editprofile">Akun Saya</Dropdown.Item>
+                                            <Dropdown.Item className="mt-2" href="/account">Akun Saya</Dropdown.Item>
                                         </Offcanvas.Body>
                                     </Offcanvas>
                                 </>

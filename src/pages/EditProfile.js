@@ -56,7 +56,7 @@ function EditProfile() {
     e.preventDefault();
 
     try {
-      const token = localStorage.getItem("Accesstoken");
+      const token = localStorage.getItem("token");
       const userToUpdatePayload = new FormData();
       userToUpdatePayload.append("name", nameField.current.value);
       userToUpdatePayload.append("city", kotaField.current.value);
@@ -94,7 +94,7 @@ function EditProfile() {
       {/* navbar */}
       <div className="na1 py-4 shadow">
         <nav className="navbar navbar-expand-lg navbar-light bg-all">
-          <Link to="/">
+          <Link to="/editprofile">
             <button className="na2 navbar-brand box"></button>
           </Link>
           <Navbar.Brand href="#" className="brand" />
@@ -119,9 +119,9 @@ function EditProfile() {
           {user.image ? (
             <Box className="profil-account">
               <Box
-                component={"img"}
+                component={'img'}
                 className="profil-camera-form"
-                src={`http://localhost:2000/api/v1/profile${user.image}`}
+                src={`${user.image}`}
               />
               <Form.Control
                 type="file"

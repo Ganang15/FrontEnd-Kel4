@@ -21,7 +21,7 @@ export default function Home() {
     const searching = useSelector(state => state.search.search)
 
     const handleJual = () => {
-        isLoggedIn ? user.kota ? navigate('/InfoProduct') : navigate(`/about/${user.id}`) : navigate('/login')
+        isLoggedIn ? user.kota ? navigate('/infoproduct') : navigate('/editprofile') : navigate('/login')
     }
 
     useEffect(() => {
@@ -85,7 +85,7 @@ export default function Home() {
     const getProductPublish = async () => {
         try {
             const dataProduct = await axios.get(
-                `http://localhost:2000/api/v1/product`
+                "http://localhost:2000/api/v1/product"
             )
 
             const payloadData = await dataProduct.data.data;

@@ -11,7 +11,6 @@ import UpdateProduct from "./pages/UpdateProduct";
 import Account from "./pages/Account";
 import DaftarJual from "./pages/DaftarJual";
 import DetailProduct from "./pages/DetailProduct";
-import About from "./pages/About";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import InfoProduct from "./pages/InfoProduct";
@@ -23,14 +22,13 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/about/:id" element={<About />} />
         <Route path="/editprofile" element={<EditProfile />} />
         <Route path="/updateproduct/:id" element={<UpdateProduct />} />
-        <Route path="/InfoProduct" element={<InfoProduct />} />
+        <Route path="/infoproduct" element={<InfoProduct />} />
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Account />} />
         <Route path="/seller/daftar-jual" element={<DaftarJual />} />
-        <Route path="/detailProduct/:id" element={<DetailProduct />} />
+        <Route path="/detailproduct" element={<DetailProduct />} />
       </Routes>
     </Router>
   </Provider>

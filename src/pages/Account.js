@@ -38,10 +38,14 @@ export default function SelectedListItem() {
                     }
                 );
 
+                console.log(currentUserRequest)
+
                 const currentUserResponse = currentUserRequest.data;
 
                 if (currentUserResponse.status) {
-                    setUser(currentUserResponse.data.user);
+                    setUser(currentUserResponse.data);
+                    setIsLoggedIn(true);
+                    console.log(user)
                 }
             } catch (err) {
                 setIsLoggedIn(false);
@@ -61,7 +65,7 @@ export default function SelectedListItem() {
 
         navigate("/");
     };
-    console.log(user.image);
+    // console.log(user.image);
 
     const alertLogout = async () => {
         Swal.fire({
@@ -99,14 +103,14 @@ export default function SelectedListItem() {
                 <Box className="profil-account">
                     <Box component={'img'}
                     className="profil-camera-form"
-                    src={`http://localhost:2000/api/v1/profile${user.image}`}
+                    src={`${user.image}`}
                     />
                 </Box>
             </Container>
             <div className="account-items">
                 <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                     <List component="nav" aria-label="main mailbox folders">
-                        <Link to={`/EditProfil/${user.id}`} style={{textDecoration: "none", color: "black"}}>
+                        <Link to={`/editprofile`} style={{textDecoration: "none", color: "black"}}>
                             <ListItemButton>
                                 <ListItemIcon>
                                     <FiEdit3 className="edit-account-icon" />

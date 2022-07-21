@@ -34,7 +34,7 @@ function DetailProduct() {
 
             // 2. Check token validity from API
             const currentUserRequest = await axios.get(
-                "http://localhost:8888/",
+                "http://localhost:2000/api/v1/product",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -55,7 +55,7 @@ function DetailProduct() {
     const getProduct = async () => {
         try {
             const token = localStorage.getItem("token");
-            const responseProduct = await axios.get(`http://localhost:8888/${id}`,
+            const responseProduct = await axios.get(`http://localhost:2000/api/v1/product`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ function DetailProduct() {
             postPayload.append("isPublish", isPublish);
 
             const createRequest = await axios.put(
-                `http://localhost:8888/${id}`,
+                `http://localhost:2000/api/v1/product`,
                 postPayload,
                 {
                     headers: {
@@ -127,7 +127,7 @@ function DetailProduct() {
                                             </Link>
                                             <img
                                                 className="d-block w-100 "
-                                                src={`http://localhost:8888/${image}`}
+                                                src={`${image}`}
                                                 alt=''
                                             />
                                         </div>
@@ -157,7 +157,7 @@ function DetailProduct() {
                         <div className="justify-content-start">
                             <div className="flex-container2">
                                 <div>
-                                    <img src={`http://localhost:8888/${user.image}`} style={{ height: '48px', width: '48px', objectFit: 'cover', borderRadius: '12px' }} alt='' />
+                                    <img src={`${user.image}`} style={{ height: '48px', width: '48px', objectFit: 'cover', borderRadius: '12px' }} alt='' />
                                 </div>
                                 <div style={{ marginLeft: '1rem' }}>
                                     <h5>{user.name}</h5>

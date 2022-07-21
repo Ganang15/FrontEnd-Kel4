@@ -63,14 +63,14 @@ export default function DaftarJual() {
                         },
                     }
                 );
-
+                console.log(currentUserRequest);
                 const currentUserResponse = currentUserRequest.data;
 
                 if (currentUserResponse.status) {
-                    setUser(currentUserResponse.data.user);
+                    setUser(currentUserResponse.data);
                 }
 
-                if (currentUserResponse.data.user.id) {
+                if (currentUserResponse.data.user) {
                     const dataProducts = await axios.get(
                         "http://localhost:2000/api/v1/product/seller",
                         {
@@ -107,7 +107,7 @@ export default function DaftarJual() {
                     <div class="d-flex mb-3">
                         <div class="p-2 ">
                             <Card.Img
-                                src={`http://localhost:8888/${user.image}`}
+                                src={`${user.image}`}
                                 style={{ objectFit: "cover" }}
                                 alt=""
                             />
@@ -117,7 +117,7 @@ export default function DaftarJual() {
                             <p className="seller-city">{user.kota}</p>
                         </div>
                         <div class="ms-auto px-4 align-self-center">
-                            <Button variant="outline-primary" className="seller-button-edit" href={`/EditProfil/${user.id}`}>Edit</Button>
+                            <Button variant="outline-primary" className="seller-button-edit" href={"/editprofile"}>Edit</Button>
                         </div>
                     </div>
                 </Card>
