@@ -1,5 +1,15 @@
-# Getting Started with Create React App
 
+# FinalProject_Frontend
+Platform E-commerce
+
+#Kelompok 4 FSW-5
+1. Cendikia Fitri Nuril Halizah
+2. Adam Nur Kridabayu
+3. Bimo Ganang
+4. Ghifari
+5. Nuraliyah Yunus
+
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
