@@ -4,7 +4,7 @@
     width: 96px;
     height: 96px;
     cursor: pointer;
-    margin-left: 260px;
+    margin-left: 210px;
     border-radius: 12px;
 }
 
@@ -13,12 +13,11 @@
     width: 96px;
     height: 96px;
     cursor: pointer;
-    margin-left: 260px;
+    margin-left: 210px;
     border-radius: 12px;
-    
 }
 
 .navbar-info {
-    margin-right: 595px;
+    margin-right: 500px;
     padding-top: 8px;
 }
